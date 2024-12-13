@@ -1,0 +1,11 @@
+0 # initial state
+[3] # terminal state
+(0,0,'g&l&!d&!p|g&!d&!l&!p|l&!d&!g&!p|!d&!g&!l&!p',ConstantRewardFunction(0))
+(0,1,'d&g&p&!l|g&p&!d&!l|p&!d&!g&!l',ConstantRewardFunction(0))
+(0,2,'l&p&!d&!g',ConstantRewardFunction(0)) # 2
+(0,3,'d&g&l&p|g&l&p&!d',ConstantRewardFunction(0)) # 3
+(1,1,'g&!d&!l|d&g&p&!l|!d&!g&!l',ConstantRewardFunction(0))
+(1,2,'l&!d&!g',ConstantRewardFunction(0)) # 2
+(1,3,'g&l&!d|d&g&l&p',ConstantRewardFunction(0)) # 3
+(2,2,'!d&!g',ConstantRewardFunction(0)) # 2
+(2,3,'g&!d|d&g&p',ConstantRewardFunction(1)) # 3

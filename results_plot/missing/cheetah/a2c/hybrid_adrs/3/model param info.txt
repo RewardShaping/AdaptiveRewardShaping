@@ -1,0 +1,20 @@
+env name: cheetah
+map id: 1
+algorithm name: a2c
+reward types: hybrid
+use adrs: True
+episode step: 1000
+adrs mu: 0.5
+hybrid eta: 0.005
+adrs update: 500.0
+gamma: 0.99
+total_timesteps: 2000000
+exploration_final_eps: (0.1,)
+exploration_initial_eps: (0.2,)
+exploration_fraction: (0.8,)
+learning rate start: 0.0007
+learning_rate_end: 1e-05
+learning_rate_fraction: 0.4
+seed: 3
+noise_level: 0.0
+('policy_kwargs', {'net_arch': {'pi': [200, 300], 'vf': [200, 300]}, 'optimizer_class': <class 'torch.optim.rmsprop.RMSprop'>})('tensorboard_log', None)('gamma', 0.99)('learning_rate', <function get_linear_fn.<locals>.func at 0x7fb7ce9994c0>)('n_steps', 2048)('ent_coef', 0.001)('max_grad_norm', 0.1)

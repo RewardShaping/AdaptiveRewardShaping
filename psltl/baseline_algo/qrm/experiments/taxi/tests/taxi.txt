@@ -1,0 +1,2 @@
+"taxiworld"
+["../experiments/taxi/reward_machines/t%d.txt"%i for i in [1]]  # single task
