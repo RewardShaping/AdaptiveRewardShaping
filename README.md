@@ -1,13 +1,13 @@
 # Adaptive Reward Design for Reinforcement Learning in Complex Robotic Tasks
 
 ## Introduction
-We observed that **optimizing a policy in terms of reward** does not always align with **optimizing a policy for task completion**, particularly when using LTL-based reward shaping. To illustrate this, we provided a toy example in our paper. In this example, Progress, a baseline reward shaping approach, consistently fails to complete the task even when following the optimal policy for reward maximization. However, by applying Progress with Adaptive Dynamic Reward Shaping (ADRS), the same scenario is successfully addressed.
+We observed that **optimizing a policy in terms of reward** does not always align with **optimizing a policy for task completion**, particularly when using LTL-based reward shaping. To illustrate this, we provided a toy example in our paper. 
 
 The following plots illustrate the performance comparison in the toy environment:
 
 ![Toy Environment Results](./results_plot/saved_plots/toy_normal_ablation.png)
 
-The plots on the left and right show the average reward during training and the success rate over time, respectively. Progress reward shaping alone fails to complete the task, while Progress reward shaping with ADRS successfully learns a policy that achieves consistent task completion. This highlights how adaptive reward shaping can overcome the limitations of static reward shaping.
+The plots on the left and right show the average reward during training and the success rate over time. Comparisons with QRM, CRM, and HRM in more complex environments are presented in our paper.
 
 ## Installation 
 
