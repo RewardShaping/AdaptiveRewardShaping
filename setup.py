@@ -21,10 +21,8 @@ setup(
         "pythomata",
         "pickle5", # for save files, and load files
     ],
-    description="logic based reward shaping for a given specification.",
-    author="Anonymous",
-    author_email="temp",
-    keywords="logic based reward shaping based on symbolic logic", 
+    description="Adaptive Reward Design for Reinforcement Learning in Complex Robotic Tasks",
+    keywords="Adaptive Reward Design for Reinforcement Learning in Complex Robotic Tasks", 
     license="MIT",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",

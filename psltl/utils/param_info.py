@@ -11,16 +11,16 @@ toy = {
     "policy_kwargs": dict([("with_bias", False), ("net_arch", []), ("optimizer_class", th.optim.SGD),]),
     "algo_name": "dqn",
     "gamma": 0.9,
-    "exploration_initial_eps": 0.2,
-    "exploration_fraction": 1,
+    "exploration_initial_eps": 1.,
+    "exploration_fraction": 0.1,
     "exploration_final_eps": 0.2,
     "learning_rate_start": 1.,
     "learning_rate_end": 1., 
-    "learning_fraction": 0.7, 
+    "learning_fraction": 1., 
     "learning_starts": 0,
     "gradient_steps": 1,
     "train_freq": 1, 
-    "adrs_update": 10, 
+    "adrs_update": 20, 
     "batch_size": 1,
     "buffer_size": 1,
     "max_grad_norm": 1, 
@@ -29,6 +29,7 @@ toy = {
     "episode_step": 25, 
     "init_qs": {"progress": 2, "distance": 2, "hybrid": 2, "naive": 2},
     "node_embedding": True,
+    "theta": 20,
     }
 
 toy = dict([(reward_type, toy) for reward_type in reward_types])
