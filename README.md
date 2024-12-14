@@ -82,7 +82,7 @@ The following plot illustrates the performance comparison between different rewa
 
 ![Toy Environment Results](./results_plot/saved_plots/toy_normal_ablation.png)
 
-The left plot shows the average reward obtained during training, while the right plot shows the success rate. As demonstrated, Progress (green line) fails to achieve optimal performance, while Progress with ADRS (red line) successfully learns the optimal policy. This highlights how adaptive reward shaping helps overcome the limitations of static reward shaping approaches. Because Q-learning can converge to suboptimal policies, progress reward shaping might enable task completion even in cases where the theoretically optimal policy would not.
+The left plot shows the average reward obtained during training, while the right plot shows the success rate. As demonstrated, Progress fails to achieve optimal performance, while Progress with ADRS successfully learns the optimal policy. This highlights how adaptive reward shaping helps overcome the limitations of static reward shaping approaches. Because Q-learning can converge to suboptimal policies, progress reward shaping might enable task completion even in cases where the theoretically optimal policy would not.
 
 ```bash
 python run.py --env_name toy --total_timesteps 10000 --total_run 1 --episode_step 25 --reward_types p --default_setting True --seed 0 --algo_name dqn --use_adrs True --node_embedding True --eval_freq 100
