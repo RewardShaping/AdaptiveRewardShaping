@@ -1,5 +1,14 @@
 # Adaptive Reward Design for Reinforcement Learning in Complex Robotic Tasks
 
+## Introduction
+We observed that **optimizing a policy in terms of reward** does not always align with **optimizing a policy for task completion**, particularly when using LTL-based reward shaping. To illustrate this, we provided a toy example in our paper. In this example, Progress, a baseline reward shaping approach, consistently fails to complete the task even when following the optimal policy for reward maximization. However, by applying Progress with Adaptive Dynamic Reward Shaping (ADRS), the same scenario is successfully addressed.
+
+The following plots illustrate the performance comparison in the toy environment:
+
+![Toy Environment Results](./results_plot/saved_plots/toy_normal_ablation.png)
+
+The plots on the left and right show the average reward during training and the success rate over time, respectively. Progress reward shaping alone fails to complete the task, while Progress reward shaping with ADRS successfully learns a policy that achieves consistent task completion. This highlights how adaptive reward shaping can overcome the limitations of static reward shaping.
+
 ## Installation 
 
 We have tested with Python 3.8.18 and Conda 23.7.4 on Ubuntu 20.04. We recommend using an Anaconda virtual environment
@@ -76,14 +85,6 @@ For noisy or infeasible environments runs, additional arguments like `--noise_le
 
 
 ##### Toy
-In the toy example, we illustrate a scenario where Progress always fails to complete the task, despite following the optimal policy for reward maximization. However, when using Progress with ADRS, this issue is resolved. Note that the example differs slightly from the one presented in the paper, primarily due to variations in map size (In order to see the result in grid map with 4 cardinal directions, it needs many timesteps). Nevertheless, the underlying reason remains the same. 
-
-The following plot illustrates the performance comparison between different reward shaping approaches in the toy environment:
-
-![Toy Environment Results](./results_plot/saved_plots/toy_normal_ablation.png)
-
-The left plot shows the average reward obtained during training, while the right plot shows the success rate. As demonstrated, Progress fails to achieve optimal performance, while Progress with ADRS successfully learns the optimal policy. This highlights how adaptive reward shaping helps overcome the limitations of static reward shaping approaches. Because Q-learning can converge to suboptimal policies, progress reward shaping might enable task completion even in cases where the theoretically optimal policy would not.
-
 ```bash
 python run.py --env_name toy --total_timesteps 10000 --total_run 1 --episode_step 25 --reward_types p --default_setting True --seed 0 --algo_name dqn --use_adrs True --node_embedding True --eval_freq 100
 ```
