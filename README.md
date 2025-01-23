@@ -35,7 +35,7 @@ git clone https://github.com/IngyN/PartialSatLTL.git
 
 ### Install the Package
 ```bash
-cd PartialSatLTL
+cd AdaptiveRewardShaping
 pip install wheel==0.38.4
 pip install setuptools==65.5.0
 pip3 install -e .
