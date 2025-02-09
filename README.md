@@ -1,4 +1,4 @@
-# Adaptive Reward Design for Reinforcement Learning in Complex Robotic Tasks
+# Adaptive Reward Design for Reinforcement Learning
 
 ## Introduction
 We observed that **optimizing a policy in terms of reward** does not always align with **optimizing a policy for task completion**, particularly when using LTL-based reward shaping. To illustrate this, we provided a toy example in our paper. 
